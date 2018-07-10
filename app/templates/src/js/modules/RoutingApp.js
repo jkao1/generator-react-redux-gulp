@@ -6,20 +6,16 @@ import MainApp from './core/components/MainApp';
 import ConnectedRouter from 'react-router-redux/ConnectedRouter';
 import store from '../store';
 
-
 class RoutingApp extends Component {
-    render () {
-        return (
-            <Provider store={ store }>
-                <ConnectedRouter history={ appHistory }>
-                    <Route
-                        exact path='/'
-                        component={ MainApp }
-                    />
-                </ConnectedRouter>
-            </Provider>
-            );
-    }
+  render() {
+    return (
+      <Provider store={store}>
+        <ConnectedRouter history={appHistory}>
+          <Route exact path="/" component={MainApp} />
+        </ConnectedRouter>
+      </Provider>
+    );
+  }
 }
 
-export default RoutingApp
+export default RoutingApp;
